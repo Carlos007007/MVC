@@ -1,46 +1,8 @@
-<!-- Content page -->
 <div class="container-fluid">
 	<div class="page-header">
 	  <h1 class="text-titles"><i class="zmdi zmdi-wrench zmdi-hc-fw"></i> GESTIÓN DE LIBRO</small></h1>
 	</div>
 	<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse voluptas reiciendis tempora voluptatum eius porro ipsa quae voluptates officiis sapiente sunt dolorem, velit quos a qui nobis sed, dignissimos possimus!</p>
-</div>
-
-<!-- Tabla de adjuntos -->
-<div class="container-fluid">
-	<div class="panel panel-warning">
-		<div class="panel-heading">
-			<h3 class="panel-title"><i class="zmdi zmdi-attachment-alt"></i> &nbsp; GESTIONAR ADJUNTOS</h3>
-		</div>
-		<div class="panel-body">
-			<div class="table-responsive">
-				<table class="table table-striped table-hover">
-					<thead>
-						<tr>
-							<th class="text-center">Nombre</th>
-							<th class="text-center">Tipo</th>
-							<th class="text-center">Eliminar</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="text-center">Nombre Archivo</td>
-							<td class="text-center">Tipo Archivo</td>
-							<td>
-								<form action="">
-									<input type="hidden" name="adjunto-tipo" value="">
-									<input type="hidden" name="adjunto-nombre" value="">
-									<p class="text-center">
-										<button class="btn btn-raised btn-danger btn-xs"><i class="zmdi zmdi-delete"></i></button>
-									</p>
-								</form>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</div>
 </div>
 
 <!-- Panel actualizar libro -->
@@ -102,24 +64,30 @@
 				</fieldset>
 				<br>
 				<fieldset>
-					<legend><i class="zmdi zmdi-labels"></i> &nbsp; Categoría y Proveedor</legend>
+					<legend><i class="zmdi zmdi-labels"></i> &nbsp; Empresa, Categoría y Proveedor</legend>
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group label-floating">
+								  	<label class="control-label">Empresa</label>
+								  	<select name="empresa-reg" class="form-control">
+								  		<option value="">Opcion 1</option>
+							        </select>
+								</div>
+		    				</div>
+							<div class="col-xs-12 col-sm-6">
+								<div class="form-group label-floating">
 								  	<label class="control-label">Categoría</label>
-								  	<select name="categoria-up" class="form-control">
-							          	<option value="categoria1">Categoría 1</option>
-							          	<option value="categoria2">Categoría 2</option>
+								  	<select name="categoria-reg" class="form-control">
+							          	<option value="">Opcion 1</option>
 							        </select>
 								</div>
 		    				</div>
 		    				<div class="col-xs-12 col-sm-6">
 								<div class="form-group label-floating">
 								  	<label class="control-label">Proveedor</label>
-								  	<select name="proveedor-up" class="form-control">
-							          	<option value="proveedor">Proveedor 1</option>
-							          	<option value="proveedor">Proveedor 2</option>
+								  	<select name="proveedor-reg" class="form-control">
+							          	<option value="">Opcion 1</option>
 							        </select>
 								</div>
 		    				</div>
@@ -168,37 +136,6 @@
 				</fieldset>
 				<br>
 				<fieldset>
-					<legend><i class="zmdi zmdi-attachment-alt"></i> &nbsp; Imágen y archivo PDF</legend>
-					<div class="col-xs-12">
-    					<div class="form-group">
-    						<span class="control-label">Imágen</span>
-							<input type="file" name="imagen-up" accept=".jpg, .png, .jpeg">
-							<div class="input-group">
-								<input type="text" readonly="" class="form-control" placeholder="Elija la imágen...">
-								<span class="input-group-btn input-group-sm">
-									<button type="button" class="btn btn-fab btn-fab-mini">
-										<i class="zmdi zmdi-attachment-alt"></i>
-									</button>
-								</span>
-							</div>
-							<span><small>Tamaño máximo de los archivos adjuntos 5MB. Tipos de archivos permitidos imágenes: PNG, JPEG y JPG</small></span>
-						</div>
-    				</div>
-    				<div class="col-xs-12">
-    					<div class="form-group">
-    						<span class="control-label">PDF</span>
-							<input type="file" name="pdf-up" accept=".pdf">
-							<div class="input-group">
-								<input type="text" readonly="" class="form-control" placeholder="Elija el PDF...">
-								<span class="input-group-btn input-group-sm">
-									<button type="button" class="btn btn-fab btn-fab-mini">
-										<i class="zmdi zmdi-attachment-alt"></i>
-									</button>
-								</span>
-							</div>
-							<span><small>Tamaño máximo de los archivos adjuntos 5MB. Tipos de archivos permitidos: documentos PDF</small></span>
-						</div>
-    				</div>
     				<div class="col-xs-12 col-sm-6">
 						<div class="form-group">
 							<label class="control-label">¿El archivo PDF será descargable para los clientes?</label>
@@ -218,35 +155,124 @@
     				</div>
 				</fieldset>
 				<p class="text-center" style="margin-top: 20px;">
-			    	<button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
+			    	<button type="submit" class="btn btn-success btn-raised btn-sm"><i class="zmdi zmdi-refresh"></i> &nbsp; Actualizar</button>
 			    </p>
 			</form>
 		</div>
 	</div>
 </div>
 
-<!-- Panel eliminar libro -->
+
 <div class="container-fluid">
-	<div class="row">
-		<div class="col-xs-12">
-			<div class="panel panel-danger">
-				<div class="panel-heading">
-					<h3 class="panel-title"><i class="zmdi zmdi-delete"></i> &nbsp; ELIMINAR LIBRO</h3>
-				</div>
-				<div class="panel-body">
-					<p class="lead">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi voluptatem quas impedit, sint eos corrupti cupiditate.
-					</p>
-					<form>
-						<input type="hidden" value="">
-						<p class="text-center">
-							<button class="btn btn-raised btn-danger">
-								<i class="zmdi zmdi-delete"></i> &nbsp; ELIMINAR DEL SISTEMA
-							</button>	
-						</p>
-					</form>
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h3 class="panel-title"><i class="zmdi zmdi-attachment-alt"></i> &nbsp; AGREGAR O ACTUALIZAR ADJUNTOS</h3>
+		</div>
+		<div class="panel-body">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<form action="">
+							<div class="form-group">
+	    						<span class="control-label">Imágen</span>
+								<input type="file" name="imagen" accept=".jpg, .png, .jpeg">
+								<div class="input-group">
+									<input type="text" readonly="" class="form-control" placeholder="Elija la imágen...">
+									<span class="input-group-btn input-group-sm">
+										<button type="button" class="btn btn-fab btn-fab-mini">
+											<i class="zmdi zmdi-image-o"></i>
+										</button>
+									</span>
+								</div>
+								<span><small>Tamaño máximo de los archivos adjuntos 1MB. Tipos de archivos permitidos imágenes: PNG, JPEG y JPG</small></span>
+							</div>
+							<p class="text-center" style="margin-top: 20px;">
+						    	<button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-upload"></i> &nbsp; Cargar imagen</button>
+						    </p>
+						    <div class="RespuestaAjax"></div>
+						</form>
+					</div>
+					<div class="col-xs-12 col-sm-6">
+						<form action="">
+							<div class="form-group">
+	    						<span class="control-label">PDF</span>
+								<input type="file" name="pdf" accept=".pdf">
+								<div class="input-group">
+									<input type="text" readonly="" class="form-control" placeholder="Elija el PDF...">
+									<span class="input-group-btn input-group-sm">
+										<button type="button" class="btn btn-fab btn-fab-mini">
+											<i class="zmdi zmdi-file"></i>
+										</button>
+									</span>
+								</div>
+								<span><small>Tamaño máximo de los archivos adjuntos 10MB. Tipos de archivos permitidos: documentos PDF</small></span>
+							</div>
+							<p class="text-center" style="margin-top: 20px;">
+						    	<button type="submit" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-upload"></i> &nbsp; Cargar PDF</button>
+						    </p>
+						    <div class="RespuestaAjax"></div>
+						</form>
+					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="container-fluid">
+	<div class="panel panel-warning">
+		<div class="panel-heading">
+			<h3 class="panel-title"><i class="zmdi zmdi-attachment-alt"></i> &nbsp; ELIMINAR ADJUNTOS</h3>
+		</div>
+		<div class="panel-body">
+			<div class="table-responsive">
+				<table class="table table-striped table-hover">
+					<thead>
+						<tr>
+							<th class="text-center">Nombre</th>
+							<th class="text-center">Tipo</th>
+							<th class="text-center">Eliminar</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="text-center">Nombre Archivo N/A</td>
+							<td class="text-center">Imagen</td>
+							<td>
+								<form action="">
+									<input type="hidden" name="adjunto-tipo" value="">
+									<input type="hidden" name="adjunto-nombre" value="">
+									<p class="text-center">
+										<button class="btn btn-raised btn-danger btn-xs"><i class="zmdi zmdi-delete"></i></button>
+									</p>
+								</form>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid">
+	<div class="panel panel-danger">
+		<div class="panel-heading">
+			<h3 class="panel-title"><i class="zmdi zmdi-delete"></i> &nbsp; ELIMINAR LIBRO</h3>
+		</div>
+		<div class="panel-body">
+			<p class="lead">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi voluptatem quas impedit, sint eos corrupti cupiditate.
+			</p>
+			<form>
+				<input type="hidden" value="">
+				<p class="text-center">
+					<button class="btn btn-raised btn-danger">
+						<i class="zmdi zmdi-delete"></i> &nbsp; ELIMINAR DEL SISTEMA
+					</button>	
+				</p>
+			</form>
 		</div>
 	</div>
 </div>
